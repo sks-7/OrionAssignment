@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import HomePage from '../pages/Homepage';
 import Mainpage from '../pages/Mainpage';
 import Navbar from '../components/Navbar';
-import RequireAuth from '../hoc/RequireAuth';
+// import RequireAuth from '../hoc/RequireAuth';
 const AllRoutes = () => {
   return (
     <div>
@@ -13,10 +13,8 @@ const AllRoutes = () => {
           path="/main"
           element={
             <>
-              <RequireAuth>
-                <Navbar />
-                <Mainpage />
-              </RequireAuth>
+              <Navbar />
+              <Mainpage />
             </>
           }
         />
