@@ -56,7 +56,7 @@ const Login = () => {
       setLoading(false);
       setTimeout(() => {
         navigate('/main');
-      }, 100);
+      }, 1000);
     } catch (error) {
       toast({
         title: 'Error Occured!',
