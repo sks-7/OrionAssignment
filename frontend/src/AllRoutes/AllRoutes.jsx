@@ -13,10 +13,9 @@ const AllRoutes = () => {
           path="/main"
           element={
             <>
-              <RequireAuth>
-                <Navbar />
-                <Mainpage />
-              </RequireAuth>
+              <Navbar />
+              <Mainpage />
+              {/* </RequireAuth> */}
             </>
           }
         />
