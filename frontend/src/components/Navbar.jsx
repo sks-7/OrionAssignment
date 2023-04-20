@@ -33,7 +33,7 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 const getData = async () => {
-  let res = await axios.get('http://localhost:8080/user');
+  let res = await axios.get('https://itchy-panama-hat-fish.cyclic.app/user');
 
   return res.data;
 };

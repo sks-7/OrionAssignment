@@ -47,12 +47,15 @@ const Signup = () => {
     }
     // console.log(name, email, password, , shortBio);
     try {
-      const { data } = await axios.post('http://localhost:8080/user/signup', {
-        name,
-        email,
-        password,
-        shortBio,
-      });
+      const { data } = await axios.post(
+        'https://itchy-panama-hat-fish.cyclic.app/user/signup',
+        {
+          name,
+          email,
+          password,
+          shortBio,
+        }
+      );
       console.log(data);
       toast({
         title: 'Registration Successful',

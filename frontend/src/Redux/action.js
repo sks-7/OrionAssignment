@@ -9,7 +9,10 @@ import {
 export const loginAPI = (creds) => async (dispatch) => {
   dispatch({ type: AUTH_LOGIN_LOADING });
   try {
-    let response = await axios.post('http://localhost:8080/user/login', creds);
+    let response = await axios.post(
+      'https://itchy-panama-hat-fish.cyclic.app/user/login',
+      creds
+    );
     dispatch({ type: AUTH_LOGIN_SUCCESS, payload: response.data });
     return response.data;
   } catch (e) {

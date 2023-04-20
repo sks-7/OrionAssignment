@@ -53,7 +53,9 @@ const Mainpage = () => {
 
   const getSingledaata = async () => {
     try {
-      let res = await axios.get(`http://localhost:8080/user/${id}`);
+      let res = await axios.get(
+        `https://itchy-panama-hat-fish.cyclic.app/user/${id}`
+      );
 
       setSingleData(res.data);
     } catch (e) {
@@ -87,7 +89,7 @@ const Mainpage = () => {
       });
     } else {
       try {
-        let res = await axios.patch(`http://localhost:8080/user/${id}`, state);
+        let res = await axios.patch(`https://itchy-panama-hat-fish.cyclic.app/user/${id}`, state);
 
         setSingleData(res.data);
         setTimeout(() => {
@@ -104,7 +106,7 @@ const Mainpage = () => {
   // geting post data
 
   const getPostdata = async () => {
-    let res = await axios.get('http://localhost:8080/post');
+    let res = await axios.get('https://itchy-panama-hat-fish.cyclic.app/post');
 
     setPostdata(res.data);
   };
@@ -127,7 +129,7 @@ const Mainpage = () => {
 
       return;
     } else {
-      await axios.post('http://localhost:8080/post/new', {
+      await axios.post('https://itchy-panama-hat-fish.cyclic.app/post/new', {
         postInput,
         picture,
       });
@@ -152,7 +154,7 @@ const Mainpage = () => {
   // delete post
 
   const handalDelete = async (id) => {
-    await axios.delete(`http://localhost:8080/post/${id}`);
+    await axios.delete(`https://itchy-panama-hat-fish.cyclic.app/post/${id}`);
 
     setTimeout(() => {
       getPostdata();
